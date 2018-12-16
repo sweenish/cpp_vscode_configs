@@ -1,0 +1,57 @@
+Windows Users
+=============
+
+I. PREPARATION
+a. Run Windows update; install updates; reboot
+b. Repeat (a.) until you are up to date
+c. Download the following:
+	1. git (from git-scm.com)
+	2. msys2 (from msys2.org)
+	3. VS Code (from code.visualstudio.com)
+
+II. Installation
+a. Install VS Code
+	1. List of pictures where I changed defaults
+b. Launch Visual Studio Code (it may open your browser); reboot
+c. Install git
+	1. List of pictures where I changed defaults
+d. Reboot
+e. Install msys2
+
+III. Configuration
+a. Test that git is installed correctly
+	1. Open a command prompt
+	2. Type the following command:
+		i. git --version
+	3. You should see it report the version of git that is installed
+b. Run msys2
+	1. Run these commands:
+		i. pacman -Syu
+			a. (when told, close the window by clicking the X, then run msys2 again)
+		ii. pacman -Su
+		iii. pacman -S mingw-w64-x86_64-toolchain
+			a. (Press enter to select the default of all)
+		iv. pacman -S make
+	2. Exit msys2
+	3. Add the msys directories to your PATH
+		i. List of pictures showing how to do that (Highlight that it can be done for your account only)
+		ii. Okay all windows to finish adding to PATH
+c. Reboot
+d. Open Powershell or a Command Prompt
+	1. Verify that g++ works with the command g++ --version
+	2. Verify that make works with the command make --version
+e. Open VS Code
+	1. Install the C/C++ extension by Microsoft
+		i. Pictures
+	2. Reload when prompted
+	3. Open the settings (Ctrl + ,)
+	4. Click the overflow menu (3 dot menu) and click Open settings.json
+		i. Pictures
+	5. Open a folder in VS Code and write a small sample program (Always open folders, not just files)
+		i. Make a couple obvious syntax errors, and check that they are detected
+		ii. Use a class (like string), try to invoke a class member function, and check that auto-complete is working
+		iii. Finally, fix up the file and open a terminal (Powershell by default) (Ctrl + `), and attempt to compile and run the program
+	
+IV. Optional
+a. Set the msys2 shell as your integrated shell in VS Code (this can be desirable if powershell syntax weirds you out)
+	1. Picture of modified VS Code settings.json
